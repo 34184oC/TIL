@@ -143,5 +143,22 @@
         <td>12,000</td>
       </tfoot>
     </table>
+    
+    <!-- img 요소 -->
+    <!-- srcset : 브라우저 크기별로 이미지 변경 -->
+    <!-- sizes : 특정 크기 지정 후 사이즈 변동되지 않도록 함 -->
+    <img src="https://pentesting.dhound.io/img/blog/img-tag.jpg"
+        srcset="https://ngs-it.com/files/course/html_image.jpg 480w,
+                https://pentesting.dhound.io/img/blog/img-tag.jpg 1200w"
+        sizes="(min-width: 480px) 480px,
+               (min-width: 1200px) 1200px"
+        alt="images">
+
+    <!-- video 요소 -->
+    <h2>video</h2>
+    <video autoplay muted>
+      <source src="/source/videoFile.mp4">
+      Sorry, your browser doesn't support embedded videos. <!-- 브라우저 미지원시 뜸 -->
+    </video>
   </body>
 </html>
