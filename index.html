@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-  </head>
-
-  <body>
-    <!-- 순차적으로 사용 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section {margin: 100px 0px;}
+  </style>
+</head>
+<body>
+  <!-- 제목 요소 -->
+  <section>
     <h1>Heading h1</h1>
     <h2>Heading h2</h2>
     <h3>Heading h3</h3>
     <h4>Heading h4</h4> 
     <h5>Heading h4</h5> 
-    <h6>Heading h4</h6> 
+    <h6>Heading h4</h6>
+  </section> 
 
-    <br>
-
+  <!-- 문단 나누기 -->
+  <section>
     <p>
       본문 사용은 다른 태그를 사용
       첫 번째 문단
@@ -28,41 +34,37 @@
       두 번째 문단
       두 번째 문단
     </p>
+  </section>
 
-    <br>
-
+  <!-- 텍스트 요소 -->
+  <section>
     <pre>iiiii</pre>
     <p>iiiii</p> <!-- 형태가 다름 -->
-    <pre>
-      두다다다다다다다
-      두다다다다다다다
-      　(∩`・ω・)
-      ＿/_ミつ/￣￣￣/
-      　　＼/＿＿＿/
-    </pre>
-
-    <br>
-
-    <a href="#" target="_blank"></a>
-
-    <br>
-
+    <a href="#" target="_blank">
+      <pre>
+        두다다다다다다다
+        두다다다다다다다
+        　(∩`・ω・)
+        ＿/_ミつ/￣￣￣/
+        　　＼/＿＿＿/
+      </pre>
+    </a>
+  </section>
+  
+  <section>
     <p>너는 <em>밥을</em> 먹어야해!</p>
     <p>그 책은 <i>셰익스피어</i>의 책이다.</p>
-
-    <br>
 
     <p>다섯 개의 스페이싱(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
     <pre>문단을 나타내는 태그는 &lt;p&gt;&lt;/p&gt; 태그 입니다.</pre> <!-- 문단으로 자동 인식 -->
 
-    <br>
-
     <span style="background-color: brown;">Hello World I'm span</span>
-    <div style="background-color: blueviolet;">Hello World I'm div</div> <!-- 블록 레벨 요소 -->
+    <div style="background-color: blueviolet;">Hello World I'm div</di> <!-- 블록 레벨 요소 -->
     <span style="background-color: brown;">Hello World I'm span</span>
-
-    <br>
-    <!-- 구획을 나타내는 요소 -->
+  </section>
+  
+  <!-- 구획을 나타내는 요소 -->
+  <section>
     <header>
       <h1>제목</h1>
     </header>
@@ -88,9 +90,10 @@
           </ul>
         <li>choco</li>
     </ol>
+  </section>
 
-    <br>
     <!-- 정의 목록 요소 -->
+  <section>  
     <dl>
       <dt>IE</dt>
       <dt>Chrome</dt>
@@ -103,9 +106,10 @@
       <dd>웹 브라우저이다.</dd>
       <dd>점유율이 제일 높다.</dd>
     </dl>
+  </section>
 
-    <br>
-    <!-- table 요소 -->
+  <!-- table 요소 -->
+  <section>
     <table>
       <caption>장보기 목록</caption>
       <thead>
@@ -143,28 +147,120 @@
         <td>12,000</td>
       </tfoot>
     </table>
-    
-    <!-- img 요소 -->
-    <!-- srcset : 브라우저 크기별로 이미지 변경 -->
-    <!-- sizes : 특정 크기 지정 후 사이즈 변동되지 않도록 함 -->
-    <img src="https://pentesting.dhound.io/img/blog/img-tag.jpg"
-        srcset="https://ngs-it.com/files/course/html_image.jpg 480w,
-                https://pentesting.dhound.io/img/blog/img-tag.jpg 1200w"
-        sizes="(min-width: 480px) 480px,
-               (min-width: 1200px) 1200px"
-        alt="images">
+  </section>
 
-    <!-- video 요소 -->
+  <!-- img 요소 -->
+  <!-- srcset : 브라우저 크기별로 이미지 변경 -->
+  <!-- sizes : 특정 크기 지정 후 사이즈 변동되지 않도록 함 -->
+  <section>
+    <img src="https://pentesting.dhound.io/img/blog/img-tag.jpg"
+      srcset="https://ngs-it.com/files/course/html_image.jpg 480w,
+              https://pentesting.dhound.io/img/blog/img-tag.jpg 1200w"
+      sizes="(min-width: 480px) 480px,
+             (min-width: 1200px) 1200px"
+      alt="images">
+  </section>
+  
+  <!-- video 요소 -->
+  <section>
     <h2>video</h2>
     <video autoplay muted>
-      <source src="/source/videoFile.mp4">
-      Sorry, your browser doesn't support embedded videos. <!-- 브라우저 미지원시 뜸 -->
+    <source src="/source/videoFile.mp4">
+    Sorry, your browser doesn't support embedded videos. <!-- 브라우저 미지원시 뜸 -->
     </video>
+  </section>
 
-    <!-- form 요소 -->
-    <form action="" method="POST"> <!-- 주소 지정안하면 현재 페이지로 감 -->
-      <input type="text" name="test">
-      <button type="submit">제출</button>
+  <!-- form 요소 -->
+  <section>
+    <form action="" method="GET">
+
+        <label>TEXT :
+          <input type="text" name="text"><br>
+        </label>
+        <label>PASSWORD : 
+          <input type="password" name="pwd"><br>
+        </label>
+        <label>EMAIL : 
+          <input type="email" name="email" disabled><br>
+        </label>
+        <label>TEL : 
+          <input type="tel" name="tel" value="010" readonly><br>
+        </label>
+        <label>RANGE : 
+          <input type="range" name="range" step="2" min="0.1" max="20"><br>
+        </label>
+        <label>DATE : 
+          <input type="date" name="date"><br>
+        </label>
+        <label>MONTH : 
+          <input type="month" name="month"><br>
+        </label>
+        <label>TIME : 
+          <input type="time" name="time"><br>
+        </label>
+        <br>
+        <label>CHECKBOX :
+          <input type="checkbox" name="check1" checked>
+          <input type="checkbox" name="check3">
+          <input type="checkbox" name="check2">
+        </label>
+        <br>
+        <label>RADIO :
+          <input type="radio" name="check" checked>
+          <input type="radio" name="check">
+          <input type="radio" name="check">
+        </label>
+        <br>
+        <input type="submit" value="제출하기">
+        <input type="button" value="빈 버튼">
+        <input type="reset" value="초기화">
+        <br>
+        <button type="submit">제출하기</button>
+        <button type="button">빈 버튼</button>
+        <button type="reset">초기화</button>
     </form>
-  </body>
+  </section>
+
+  <section>
+    <form action="" method="GET">
+      <label for="movie">좋아하는 영화:</label>
+      <select name="movie" id="movie" required>
+        <option value="">--choose option</option>
+        <optgroup label="SF">
+          <option value="getout">겟아웃</option>
+          <option value="matrix">매트릭스</option>
+        <optgroup label="Animation">
+          <option value="insideout">인사이드아웃</option>
+          <option value="panda">쿵푸팬더</option>
+        </optgroup>
+      </select>
+    </form>
+  </section>
+
+  <section>
+    <form action="" method="GET">
+      <label for="movie">좋아하는 영화</label>
+      <input type="text" id="movie" name="movie" list="movie-list">
+
+      <datalist id="movie-list">
+        <option>주토피아</option>
+        <option>주토피아1</option>
+        <option>주토피아2</option>
+        <option>주토피아3</option>
+        <option>주토피아4</option>
+        <option>주토피아5</option>
+      </datalist>
+
+      <input type="button" value="제출">
+    </form>
+  </section>
+
+  <section>
+    <label for="comment">댓글 :
+      <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+    </label>
+  </section>
+</body>
 </html>
+
+    
