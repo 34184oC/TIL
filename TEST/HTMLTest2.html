@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section {
+      margin-top: 50px;
+      border: 1px solid rgb(155, 170, 255);
+    }
+    .content {
+      margin: 10px 15px 20px 15px;
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+      border: 1px black;
+    }
+    nav {
+      display: flex;
+      height: 64px;
+      padding: 0px 16px;
+      flex-direction: row;
+      border-bottom: 1px solid rgb(231, 231, 231);
+      line-height: 64px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .menu {
+      display: flex;
+      flex-direction: row;
+    }
+    .menu > ul {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- TEST 1 -->
+  <section>
+    <div class="content"></div>
+  </section>
+
+  <!-- TEST 2 -->
+  <section>
+    <nav>
+      <article class="logo">
+        <span>네카라쿠배</span>
+      </article>
+      <article class="menu">
+        <ul>
+          <li>로그인</li>
+          <li>회원가입</li>
+          <li>마이페이지</li>
+        </ul>
+      </article>
+    </nav>
+  </section>
+</body>
+</html>
