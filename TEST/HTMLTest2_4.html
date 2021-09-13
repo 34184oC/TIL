@@ -15,7 +15,6 @@
     }
     .container {
       display: flex;
-      flex-flow: row wrap;
     }
     .left {
       width: 75%;
@@ -50,7 +49,23 @@
 
     /* 반응형 */
     @media (max-width: 720px) {
-      
+      .container {
+        display: block;
+      }
+      .left {
+        width: 100%;
+        margin-bottom: 100px;
+      }
+      .left > .intro {
+        margin-right: 20px;
+      }
+
+      .right {
+        width: 100%;
+      }
+      .nth > ol > li {
+        width: 450px;
+      }
     }
   </style>
 </head>
