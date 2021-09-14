@@ -2,7 +2,7 @@
 
 <br>
 
-## ☝ [HTML](src/HTML)
+## ☝ [HTML](src/zerobase-TIL/HTML)
 HTML(5) 의 기본 지식들과 의미론적 관점 태그 등을 정리했습니다.
 <br>
 
@@ -18,7 +18,7 @@ HTML(5) 의 기본 지식들과 의미론적 관점 태그 등을 정리했습�
 <br>
 <br>
 
-## ✌ [CSS](src/CSS)
+## ✌ [CSS](src/zerobase-TIL/CSS)
 CSS(3)의 기본 지식들과 최신 레이아웃 속성 등을 정리했습니다.
 <br>
 
