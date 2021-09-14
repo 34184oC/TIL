@@ -5,6 +5,7 @@
 ## ☝ HTML [https://github.com/34184oc/zerobase-TIL/tree/main/HTML](src/HTML)
 HTML(5) 의 기본 지식들과 의미론적 관점 태그 등을 정리했습니다.
 <br>
+
 0. HTML의 개요
 1. HTML의 요소(1) 
 2. HTML의 요소(2)
@@ -15,12 +16,11 @@ HTML(5) 의 기본 지식들과 의미론적 관점 태그 등을 정리했습�
 
 <br>
 <br>
-----
-<br>
 
 ## ✌ CSS [https://github.com/34184oc/zerobase-TIL/tree/main/CSS](src/CSS)
 CSS(3)의 기본 지식들과 최신 레이아웃 속성 등을 정리했습니다.
 <br>
+
 0. CSS의 개요
 1. CSS 선택자
 2. 폰트 관련 속성
