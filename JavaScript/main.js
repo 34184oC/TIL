@@ -1,61 +1,3 @@
-let 안녕 = "하세요";
-let hi = "hello";
-let HI = "HELLO";
-
-console.log(안녕);
-console.log(hi);
-console.log(HI);
-
-// 선언 후 할당
-let hi1;
-hi1 = "hello";
-
-// 선언과 동시에 초기화
-let helo = "hello!";
-
-// 한 줄에 변수 여러 개 선언 가능
-let name = "name", 
-    age = 13, 
-    msg = "hello";
-
-// 상수는 보통 대문자로 표기
-const TESTCASE = 5;
-const BIRTHDAY = "2020.04.14";
-
-
-// ================== 자료형 예제
-console.log(typeof undefined); // undefined
-console.log(typeof 123); // number
-console.log(typeof 461n); // bigint
-console.log(typeof true); // boolean
-console.log(typeof "hi"); // sting
-console.log(typeof Symbol("id")); // symbol
-console.log(typeof Math); // object
-console.log(typeof null); // object
-console.log(typeof console.log); // function
-
-let num1 = 123.0;
-let num2 = 123.1398;
-let num3 = 1 / 0;
-let num4 = 1123948n
-
-console.log(num1 - num2); // -0.13979999999999393
-console.log((num1 - num2).toFixed(3)); // -0.139
-console.log(num3); // Infinity
-console.log(num1 / "HI"); // NaN
-console.log(typeof num4);// bigint
-
-let str_1 = "hello_1";
-let str_2 = "hi";
-
-let num = 3;
-let str_3 = `hello_${num}`;
-
-console.log(str_1);
-console.log(str_2);
-console.log(str_3);
-
-
 // ======================== 객체 예제
 let user = {
   name: "jiyeong", 
@@ -76,7 +18,7 @@ delete user.name;
 console.log(user); // 삭제됨..!
 
 
-// ================== 객체 예제 문제점
+// ====================== 객체 예제 문제점
 let user1 = {
   name: "철수",
   age: 32.,
@@ -124,3 +66,117 @@ console.log(admin_json.sizes.weight); // 73
 console.log(admin_json.sizes.height); // 179
 console.log(user3.sizes.weight); // 72
 console.log(user3.sizes.height); // 180 
+
+
+// ====================== scope - 1
+let scopeX = 1;
+let scopeY = 2;
+
+// local scope : 같은 변수를 선언해도 error 없음
+{
+  let scopeX = 3;
+  let scopeY = 4;
+}
+
+function scope() {
+  let scopeX = 5;
+  let scopeY = 6;
+}
+
+console.log(scopeX); // 1
+console.log(scopeY); // 2
+
+
+// ===================== scope - 2
+let scopeA = 1;
+let scopeB = 2;
+
+{
+  let scopeC = 3;
+  let scopeD = 4;
+}
+
+console.log(scopeA);
+
+// ====================== scope - 3
+let scopeIndex = 1000; // global scope
+
+// function level scope
+function local_scope() {
+  let scopeIndex = 100;
+
+  // block level scope
+  for (let scopeIndex = 0; scopeIndex < 10; scopeIndex++) {
+    console.log(scopeIndex); // 0 ~ 9
+  }
+
+  console.log(scopeIndex); // 100
+}
+
+local_scope();
+console.log(scopeIndex); // 1000;
+
+
+// ========================= switch 연습문제
+const switchDay = 3;
+let switchWeek = "";
+
+switch (switchDay) {
+  case 1:
+    switchWeek = "월요일"; break;
+  case 2:
+    switchWeek = "화요일"; break;
+  case 3:
+    switchWeek = "수요일"; break;
+  case 4:
+    switchWeek = "목요일"; break;
+  case 5:
+    switchWeek = "금요일"; break;
+  case 6:
+    switchWeek = "토요일"; break;
+  case 7:
+    switchWeek = "일요일"; break;
+}
+console.log(switchWeek); // 수요일
+
+
+// ========================== 2중 for문
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 5; j++) {
+    console.log(`${i} + ${j} = ${i + j}`);
+  }
+}
+
+// output: 
+for (let i = 10; i < 3; i++) {
+  console.log(i);
+}
+
+// for..in
+const forinPerson = { fname: "John", Iname: "Bob", age: 25 };
+
+let forinText = "";
+
+for (let x in forinPerson) {
+  forinText += forinPerson[x];
+} 
+console.log(forinText);
+
+// ========================== while
+let whileI = 0;
+while (whileI < 3) {
+  console.log(whileI);
+  whileI++;
+}
+
+whileI = 0;
+do {
+  console.log(whileI);
+  whileI++;
+} while (whileI < 3);
+
+whileI = 4;
+do {
+  console.log(whileI);
+  whileI++;
+} while (whileI < 3);
