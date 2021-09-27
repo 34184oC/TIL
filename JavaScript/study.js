@@ -14,3 +14,16 @@ for (let i = 2; i <= 9; i++) {
     console.log(solve2);
   }
 }
+
+
+// 함수 : 연습문제 (3항 연산자로도 풀이가 가능했다!)
+function MAX(x, y) {
+  if (x > y) return x;
+  else return y;
+}
+
+console.log(MAX(0, 3)); 
+console.log(MAX(-5, 6)); 
+console.log(MAX(190, 32)); 
+
+

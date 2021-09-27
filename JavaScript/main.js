@@ -180,3 +180,51 @@ do {
   console.log(whileI);
   whileI++;
 } while (whileI < 3);
+
+
+// ==================== 재귀 함수
+function recursive(num) {
+  if (num == 0) return 0;
+  return num + recursive(num - 1);
+}
+console.log(recursive(3)); // 3 + (2 + (1 + 0)) = 6
+
+// factorial function
+function factorial(x) {
+  if (x === 0) return 1;
+
+  return x * factorial(x - 1); // return 값이 아래(0)부터 올라와 재귀 함수에 적용됨
+}
+
+const num = 3;
+
+let facResult = factorial(num);
+
+// The factorial of 3 is 6
+console.log(`The factorial of ${num} is ${facResult}`); 
+
+// ============================= callback, higher-order function
+// callback function
+function callAdd(x, y) {
+  return x + y;
+}
+function callSub(x, y) {
+  return x - y;
+}
+function callMul(x, y) {
+  return x * y;
+}
+function callDiv(x, y) {
+  return x / y;
+}
+
+// highter-order fucntion
+function calculator(callback, x, y) {
+  return callback(x, y);
+}
+
+// 각 함수들이 callback 함수가 되어 calculator 함수에 매개변수로 호출 됨
+console.log(calculator(callAdd, 7, 3));
+console.log(calculator(callSub, 7, 3));
+console.log(calculator(callMul, 7, 3));
+console.log(calculator(callDiv, 7, 3));
