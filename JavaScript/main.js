@@ -228,3 +228,42 @@ console.log(calculator(callAdd, 7, 3));
 console.log(calculator(callSub, 7, 3));
 console.log(calculator(callMul, 7, 3));
 console.log(calculator(callDiv, 7, 3));
+
+// ============================== method
+function method_func() { console.log("helo"); }
+
+function method2_func() { console.log("hi"); }
+
+let obj = {
+  name: "park",
+  age: 93,
+  func: method_func,
+};
+
+method_func(); // hello
+obj.func(); // hello
+console.log(method_func == obj.func); // true
+
+obj.func = method2_func; // 주소 복사
+method2_func(); // hi
+obj.func(); //hi
+console.log(method_func == obj.func); // false, method2가 씌워짐
+console.log(method2_func == obj.func); // true
+
+// ================ this
+let thisUser = { name: "park" };
+let thisAdmin = { name: "admin" };
+
+function this_func() {
+  console.log("hello" + this.name);
+}
+
+// func property 추가
+thisUser.func = this_func;
+thisAdmin.func = this_func;
+
+thisUser.this_func();
+thisAdmin.this_func();
+
+user["func"]();
+admin["func"]();
