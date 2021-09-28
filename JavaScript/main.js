@@ -259,11 +259,35 @@ function this_func() {
 }
 
 // func property 추가
-thisUser.func = this_func;
+/* thisUser.func = this_func;
 thisAdmin.func = this_func;
 
 thisUser.this_func();
 thisAdmin.this_func();
 
 user["func"]();
-admin["func"]();
+admin["func"](); */
+
+// ===================== 배열 탐색
+let arrayFruits = ["apple", "orange", "melon", "grape", "orange"];
+
+console.log(arrayFruits.indexOf("orange")); // 1
+console.log(arrayFruits.indexOf("Orange")); // 배열 내 없으면 -1
+console.log(arrayFruits.indexOf("orange", 2)); // 4
+
+console.log(arrayFruits.lastIndexOf("orange")); // 4
+console.log(arrayFruits.lastIndexOf("orange", -3)); // 1
+console.log(arrayFruits.lastIndexOf("orange", 0)); // -1
+
+console.log(arrayFruits.includes("banana")); // true
+console.log(arrayFruits.includes("Banana")); // false
+console.log(arrayFruits.includes(0)); // false
+
+
+const arrayNums = [1, 3, 54, 2, 5, -1];
+
+console.log(arrayNums.sort()); // [-1, 1, 2, 3, 5, 54]
+console.log(arrayNums.reverse()); // [54, 5, 3, 2, 1, -1]
+
+
+
