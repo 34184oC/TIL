@@ -2,8 +2,8 @@
 
 <br>
 
-## ☝ [HTML](src/zerobase-TIL/HTML)
-HTML(5) 의 기본 지식들과 의미론적 관점 태그 등을 정리했습니다.
+## ☝ [HTML](/HTML)
+HTML(5) 의 기본 개념과 의미론적 관점 태그 등을 정리했습니다.
 <br>
 
 #### List
@@ -18,8 +18,8 @@ HTML(5) 의 기본 지식들과 의미론적 관점 태그 등을 정리했습�
 <br>
 <br>
 
-## ✌ [CSS](src/zerobase-TIL/CSS)
-CSS(3)의 기본 지식들과 최신 레이아웃 속성 등을 정리했습니다.
+## ✌ [CSS](/CSS)
+CSS(3)의 기본 개념과 최신 레이아웃 속성 등을 정리했습니다.
 <br>
 
 #### List
@@ -32,3 +32,27 @@ CSS(3)의 기본 지식들과 최신 레이아웃 속성 등을 정리했습니�
 6. CSS 변형과 전환, 애니메이션
 7. CSS의 레이아웃(1) : Flex
 8. CSS의 레이아웃(2) : Gird
+
+<br>
+<br>
+
+## ✌ [JavaScript](/JavaScript)
+JavaScript(ES6)의 기본 개념과 응용 문제 풀이과정 등을 정리했습니다.
+<br>
+
+#### List
+0. JavaScript의 개요
+1. 변수와 자료형
+2. JavaScript의 연산자
+3. 조건문과 반복문
+4. 함수와 메서드
+5. Number & String
+6. Array
+7. 고차함수와 생성자
+8. Collection(1)
+9. Collection(2)
+10. 문제풀이
+  - 연습문제
+  - 조건문
+  - 반복문
+  - 문제풀이(종합)
