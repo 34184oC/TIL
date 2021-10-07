@@ -59,7 +59,7 @@ console.log(ll);
 <br>
 
 ### ✔ Linked List 예제(1)
- 연결 리스트 끝에 노드에 추가하기
+연결 리스트 끝에 노드에 추가하기
 
 ```js
 function Node(data) {
@@ -104,48 +104,207 @@ ll.append(10);
 ll.append(100);
 
 ll.printNode();
-console.log(ll.size());
+console.log(ll.size()); // 1> 10 > 100 > null
 ```
 
 <br>
 <br>
 
 ### ✔ Linked List 예제(3)
+position 위치에 노드 추가하기 🤯
 ```js
+// insert(): positoin 위치에 노드 추가
+LinkedList.prototype.insert = function (value, positon = 0) {
+  if (positon < 0 || position > this.length) {
+    return false;
+  }
 
+  let node = new Node(value),
+  current = this.head,
+  index = 0,
+  prev;
+
+  if (positon == 0) {
+    node.next = current;
+    this.head = node;
+  } else {
+    while (index++ < postion) {
+      prev = current;
+      current = current.next;
+    }
+
+    node.next = current;
+    prev.next = node;
+  }
+
+  this.length++;
+
+  return true;
+}
+
+let ll = new LinkedList();
+
+ll.insert(1);
+ll.insert(10);
+ll.insert(100); // 100 > 10 > 1 > null
+
+ll.insert(2, 1);
+ll.insert(3, 3);
+ll.printNode(); // 100 > 2 > 10 > 3 > 1 > null
+console.log(ll.size()); 
 ```
 
 <br>
 <br>
 
-### ✔ Linked List 예제(1)
+### ✔ Linked List 예제(4)
+value 데이터를 찾아 노드 삭제
 ```js
+LinkedList.prototype.remove = function(value) {
+  let current = this.head,
+  preve = current;
 
+  while (current.data != value && current.next != null) {
+    prev = current;
+    current = current.next;
+  }
+
+  if (current.data != value) {
+    return null;
+  }
+
+  if (current === this.head) {
+    this.head = current.next;
+  } else {
+    prev.next = current.next;
+  }
+
+  this.length--;
+
+  return current.data;
+};
+
+let ll = new LinkedList();
+
+ll.insert(1);
+ll.insert(10);
+ll.insert(100);
+ll.insert(2, 1);
+ll.insert(3, 3);
+ll.printNode();
+
+console.log(ll.remove(1000));
+ll.printNode();
+console.log(ll.remove(1));
+ll.printNode();
+console.log(ll.remove(2));
+ll.printNode();
+console.log(ll.remove(100)); // 10 > 3 > null
+ll.printNode();
+console.log(ll.size()); // 2
 ```
 
 <br>
 <br>
 
-### ✔ Linked List 예제(1)
+### ✔ Linked List 예제(5)
+position 위치 노드 삭제하기
 ```js
+// insert(): positoin 위치에 노드 추가
+LinkedList.prototype.insert = function (value, positon = 0) {
+  if (positon < 0 || position >= this.length) {
+    return null;
+  }
 
+  let current = this.head,
+  index = 0,
+  prev;
+
+  if (positon == 0) {
+    this.head = current.next;
+  } else {
+    while (index++ < postion) {
+      prev = current;
+      current = current.next;
+    }
+
+    prev.next = current.next;
+  }
+
+  this.length--;
+
+  return current.data;
+}
+
+let ll = new LinkedList();
+
+ll.insert(1);
+ll.insert(10);
+ll.insert(100); 
+ll.insert(2, 1);
+ll.insert(3, 3);
+ll.printNode();
+
+console.log(ll.removeAt(1000));
+ll.printNode();
+console.log(ll.removeAt(4));
+ll.printNode();
+console.log(ll.removeAt());
+ll.printNode();
+console.log(ll.removeAt(1)); // 2 > 3 > null
+ll.printNode();
+console.log(ll.size()); 
 ```
 
 <br>
 <br>
 
-### ✔ Linked List 예제(1)
+### ✔ Linked List 예제(6)
+value값을 갖는 노드 위치 반환하기
+
 ```js
+LinkedList.prototype.indexOf = function(value) {
+  let current = this.head,
+  index = 0;
 
+  while (current != null) {
+    if (current.data === value) {
+      return index;
+    }
+
+    index++;
+    current = current.next;
+  }
+
+  return -1;
+};
+
+LinkedList.prototype.remove2 = function(value) {
+  let index = this.indexOf(value);
+  return this.removeAt(index);
+}
+
+let ll = new LinkedList();
+
+ll.insert(1);
+ll.insert(10);
+ll.insert(100); 
+ll.insert(2, 1);
+ll.insert(3, 3);
+ll.printNode();
+
+console.log(ll.indexOf(1000));
+console.log(ll.indexOf(1));
+console.log(ll.indexOf(100));
+console.log(ll.indexOf(10));
+
+console.log(ll.remove2(1000));
+ll.printNode();
+console.log(ll.remove2(1));
+ll.printNode();
+console.log(ll.remove2(2));
+ll.printNode();
+console.log(ll.remove2(100));
+ll.printNode();
+console.log(ll.size());
 ```
-
-<br>
-<br>
-
-### ✔ Linked List 예제(1)
-```js
-
-```
-
-<br>
-<br>
