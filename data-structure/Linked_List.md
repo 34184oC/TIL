@@ -58,7 +58,7 @@ console.log(ll);
 <br>
 <br>
 
-### ✔ Linked List 예제(1)
+### ✔ Linked List 예제(2)
 연결 리스트 끝에 노드에 추가하기
 
 ```js
@@ -210,37 +210,36 @@ console.log(ll.size()); // 2
 ### ✔ Linked List 예제(5)
 position 위치 노드 삭제하기
 ```js
-// insert(): positoin 위치에 노드 추가
-LinkedList.prototype.insert = function (value, positon = 0) {
-  if (positon < 0 || position >= this.length) {
+LinkedList.prototype.removeAt = function (position = 0) {
+  if (position < 0 || position >= this.length) {
     return null;
   }
-
   let current = this.head,
-  index = 0,
-  prev;
+    index = 0,
+    prev;
 
-  if (positon == 0) {
+  if (position == 0) {
     this.head = current.next;
   } else {
-    while (index++ < postion) {
+    while (index++ < position) {
       prev = current;
       current = current.next;
     }
-
+  
     prev.next = current.next;
   }
 
   this.length--;
 
   return current.data;
-}
+};
 
+// Test
 let ll = new LinkedList();
 
 ll.insert(1);
 ll.insert(10);
-ll.insert(100); 
+ll.insert(100);
 ll.insert(2, 1);
 ll.insert(3, 3);
 ll.printNode();
@@ -251,9 +250,9 @@ console.log(ll.removeAt(4));
 ll.printNode();
 console.log(ll.removeAt());
 ll.printNode();
-console.log(ll.removeAt(1)); // 2 > 3 > null
+console.log(ll.removeAt(1));
 ll.printNode();
-console.log(ll.size()); 
+console.log(ll.size());
 ```
 
 <br>
