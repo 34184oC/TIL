@@ -10,7 +10,7 @@
 
 - 구현 메서드
   - 데이터 전체 획득 / 비어 있는지 확인: ```Stack.getBuffer()```, ```Stack.isEmpty()```
-  - 추가 / 삭제 / 마지막 데이터 조회 / 크기 확인: ```Stack.push()```, ```Stack.pop()```, ```Stack.peak()```, ```Stack.size()```
+  - 추가 / 삭제 / 마지막 데이터 조회 / 크기 확인: ```Stack.push()```, ```Stack.pop()```, ```Stack.peek()```, ```Stack.size()```
   - 데이터 위치 / 존재 여부 확인: ```Stack.indexOf()```, ```Stack.includes()```
 
 <br>
