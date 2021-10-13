@@ -114,7 +114,7 @@ PriorityQueue.prototype.clear = function () {
 let pq = new PriorityQueue();
 
 pq.enqueue("Alice", 1);
-pq.enqueue("Bob", 2);
+pq.enqueue("Bob"a, 2);
 pq.enqueue("Tom", 1);
 pq.enqueue("John", 3);
 
@@ -131,7 +131,7 @@ console.log(pq.size());
 <br>
 <br>
 
-### ✔ Priority Queue 구현 예제(3)
+### ✔ Priority Queue 구현 예제(4)
 
 ```js
 // front(): 가장 첫 데이터 반환
