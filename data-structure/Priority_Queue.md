@@ -2,9 +2,6 @@
 
 # Priority Queue
 
-<br>
-<br>
-
 ## 우선순위 큐(Priority Queue)
 우선순위를 고려하여 먼저 넣은 데이터가 먼저 나오는 FIFO 기반의 선형 자료 구조
 
